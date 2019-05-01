@@ -1,0 +1,33 @@
+
+
+.container{
+    display: grid;
+    grid-template-columns: auto 500px auto;
+    grid-template-rows: 100px auto 100px;
+    height: 100%;
+}
+.board{
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: aqua;
+    height: 500px;
+    z-index: -1;
+}
+.box{
+    position: absolute;
+    height: 25px;
+    background-color: rgb(230, 235, 255);
+    width: 25px;
+    z-index: 10;
+    text-align: center;
+}
+
+.food{
+    display: inline-block;
+    position: relative;
+    top: 10%;
+    z-index: 20;
+}

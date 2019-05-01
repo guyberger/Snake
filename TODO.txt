@@ -1,0 +1,7 @@
+
+
+1. Transform the multiple boxes of the snake to a moving part with 'transitions'.
+
+2. Add teleporting through walls.
+
+3. 
