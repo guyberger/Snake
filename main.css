@@ -1,4 +1,24 @@
 
+body{
+    font-family: 'Roboto';
+}
+
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+@media screen and (max-width: 1024px){
+    img.bg {
+    left: 50%;
+    margin-left: -512px; }
+}
 
 .container{
     display: grid;
@@ -12,14 +32,14 @@
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: aqua;
     height: 500px;
-    z-index: -1;
+    box-shadow: 0 0 20px 0 rgb(62, 75, 99);
+    z-index: 20;
 }
 .box{
     position: absolute;
     height: 25px;
-    background-color: rgb(230, 235, 255);
+    background-color: rgb(189, 227, 253);
     width: 25px;
     z-index: 10;
     text-align: center;
@@ -29,5 +49,53 @@
     display: inline-block;
     position: relative;
     top: 10%;
+    z-index: 19;
+}
+
+.title-container{
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+.title{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    font-size: 1.5em;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sub-title{
+    position: absolute;
+    opacity: 0.65;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    font-size: 0.8em;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.restart{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    opacity: 0.5;
     z-index: 20;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.restart:active {
+    outline: none;
+    border: none;
 }
